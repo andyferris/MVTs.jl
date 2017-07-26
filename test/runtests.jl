@@ -1,5 +1,6 @@
 using MVTs
 using Base.Test
 
-# write your own tests here
-@test 1 == 2
+include("Label.jl")
+include("Row.jl")
+include("Table.jl")
