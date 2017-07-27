@@ -17,3 +17,6 @@ function show(io::IO, row::Row{names}) where names
     end
     print(io, ")")
 end
+
+@inline names(::Row{_names}) where {_names} = _names
+@inline labels(::Row{names}) where {names} = labels(names...)

@@ -5,4 +5,7 @@
     @test @inferred(row[l"a"]) === 1
     @test @inferred(row[l"b"]) === 2.0
     @test_throws ErrorException row[l"c"]
+
+    @test names(row) === (:a, :b)
+    @test @inferred(labels(row)) === (l"a", l"b")
 end

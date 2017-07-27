@@ -1,4 +1,4 @@
-struct Table{names, T <: Tuple{Vararg{AbstractVector}}}
+struct Table{names, T <: Tuple{Vararg{AbstractVector}}} <: Relation{names}
     data::T
 end
 
