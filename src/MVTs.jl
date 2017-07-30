@@ -11,8 +11,18 @@ export Label, @l_str, labels
 export Row, Table
 
 include("Label.jl")
+include("symbolic.jl")
+
 include("Relation.jl")
 include("Row.jl")
+include("Index.jl")
 include("Table.jl")
+
+include("projection.jl")
+include("join.jl")
+include("broadcast.jl")
+
+include("isequal.jl")
+#include("symbolic.jl")
 
 end # module

@@ -1,5 +1,6 @@
-struct Table{names, T <: Tuple{Vararg{AbstractVector}}} <: Relation{names}
+struct Table{names, T <: Tuple{Vararg{AbstractVector}}, I <: Tuple{Vararg{Index}}} <: Relation{names}
     data::T
+    indexes::I
 end
 
 @inline Table(in::Pair{<:Label}...) = Table{getnames(in)}(getvalues(in))

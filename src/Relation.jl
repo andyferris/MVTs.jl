@@ -6,3 +6,4 @@ abstract type Relation{names}; end
 @pure labels(names::Symbol...) = _labels(names...)
 @inline _labels(name::Symbol) = (Label{name}(),)
 @inline _labels(name::Symbol, other_names...) = (Label{name}(), _labels(other_names...)...)
+
